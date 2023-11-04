@@ -1,6 +1,7 @@
 import { User } from "../types/User";
 import { Pweep } from "../types/Pweep";
 import "./PweepComponent.scss";
+import { LikeOutlined, RetweetOutlined } from "@ant-design/icons";
 
 type Props = {
   user: User;
@@ -20,6 +21,10 @@ export const PweepComponent = ({ user, pweep }: Props) => {
           <div className="pweep__creation-date">{pweep.createdAt}</div>
         </div>
         <div className="pweep__body-content">{pweep.content}</div>
+        <div className="pweep__body-controls">
+          <LikeOutlined />
+          <RetweetOutlined />
+        </div>
       </div>
     </div>
   );

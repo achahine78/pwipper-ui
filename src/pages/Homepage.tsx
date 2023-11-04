@@ -13,7 +13,7 @@ const user: User = {
 const pweep: Pweep = {
     id: 'pweep',
     createdAt: 'whatever',
-    content: 'shu lshabezz',
+    content: 'shu lshabezz shu lshabezz shu lshabezz shu lshabezz shu lshabezz shu lshabezz shu lshabezz shu lshabezz',
     likes: 123,
     repweeps: 400,
 }
