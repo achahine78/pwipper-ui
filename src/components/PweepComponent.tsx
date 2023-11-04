@@ -1,5 +1,6 @@
 import { User } from "../types/User";
 import { Pweep } from "../types/Pweep";
+import "./PweepComponent.scss";
 
 type Props = {
   user: User;
@@ -8,15 +9,17 @@ type Props = {
 
 export const PweepComponent = ({ user, pweep }: Props) => {
   return (
-    <div>
-      <div>
-        <img src={user.image} />
-        <div>{user.name}</div>
-        <div>{user.handle}</div>
-        <div>{pweep.createdAt}</div>
+    <div className="pweep">
+      <div className="pweep__profile-image-container">
+        <img src={user.image} className="pweep__profile-image" />
       </div>
-      <div>
-        {pweep.content}
+      <div className="pweep__body">
+        <div className="pweep__body-header">
+          <div className="pweep__username">{user.name}</div>
+          <div className="pweep__handle">@{user.handle}</div>
+          <div className="pweep__creation-date">{pweep.createdAt}</div>
+        </div>
+        <div className="pweep__body-content">{pweep.content}</div>
       </div>
     </div>
   );

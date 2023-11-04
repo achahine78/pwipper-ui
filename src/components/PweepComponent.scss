@@ -1,0 +1,42 @@
+.pweep {
+    padding: 16px;
+    display: flex;
+    .pweep__profile-image-container {
+        .pweep__profile-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+
+    .pweep__body {
+        padding-left: 8px;
+        padding-right: 8px;
+        .pweep__body-header {
+            display: flex;
+
+            .pweep__username, .pweep__handle, .pweep__creation-date {
+                margin-right: 8px;
+            }
+
+            .pweep__username {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .pweep__handle {
+                font-size: 16px;
+                opacity: 0.7;
+            }
+
+            .pweep__creation-date {
+                font-size: 16px;
+                opacity: 0.7;
+            }
+
+        }
+        .pweep__body-content {
+            font-size: 16px;
+        }
+    }
+}
