@@ -6,5 +6,5 @@ export type Pweep = {
   content: string;
   likes: number;
   repweeps: number;
-  user: User
+  user: User;
 };
