@@ -1,3 +1,4 @@
+import { PostPweep } from "../components/PostPweep";
 import { PweepList } from "../components/PweepList";
 import { Pweep } from "../types/Pweep";
 import { User } from "../types/User";
@@ -44,6 +45,7 @@ const pweeps = [
 export const Homepage = () => {
   return (
     <div>
+      <PostPweep user={user} />
       <PweepList pweeps={pweeps} />
     </div>
   );
