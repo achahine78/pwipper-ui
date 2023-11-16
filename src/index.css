@@ -1,3 +1,21 @@
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
