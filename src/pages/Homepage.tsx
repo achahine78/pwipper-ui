@@ -1,5 +1,6 @@
 import { PostPweep } from "../components/PostPweep";
 import { PweepList } from "../components/PweepList";
+import { Sidebar } from "../components/Sidebar";
 import { Pweep } from "../types/Pweep";
 import { User } from "../types/User";
 
@@ -44,9 +45,12 @@ const pweeps = [
 
 export const Homepage = () => {
   return (
-    <div>
-      <PostPweep user={user} />
-      <PweepList pweeps={pweeps} />
+    <div style={{ display: "flex" }}>
+      <Sidebar />
+      <div>
+        <PostPweep user={user} />
+        <PweepList pweeps={pweeps} />
+      </div>
     </div>
   );
 };
