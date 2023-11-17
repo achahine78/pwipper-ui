@@ -7,6 +7,8 @@ export const user: User = {
   image: "https://picsum.photos/200",
   handle: "achahine78",
   bio: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+  followerCount: 125,
+  followingCount: 12345
 };
 
 export const pweep: Pweep = {

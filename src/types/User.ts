@@ -4,4 +4,6 @@ export type User = {
   image: string;
   handle: string;
   bio: string;
+  followerCount: number;
+  followingCount: number;
 };

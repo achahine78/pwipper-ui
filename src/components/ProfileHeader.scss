@@ -1,0 +1,35 @@
+.profile-header {
+    padding: 16px;
+
+    .profile-header__image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;;
+    }
+
+    .profile-header__username {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+
+    .profile-header__handle {
+        color: rgba(83, 100, 113);
+    }
+
+    .profile-header__bio {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .profile-header__follow-count-container {
+        margin-right: 8px;
+        .profile-header__follow-count {
+            font-weight: bold;
+            margin-right: 4px;
+        }
+        .profile-header__follow-count-label {
+            color: rgba(83, 100, 113);
+        }
+    }
+}
