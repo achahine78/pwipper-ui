@@ -45,12 +45,9 @@ const pweeps = [
 
 export const Homepage = () => {
   return (
-    <div style={{ display: "flex" }}>
-      <Sidebar />
-      <div>
-        <PostPweep user={user} />
-        <PweepList pweeps={pweeps} />
-      </div>
+    <div>
+      <PostPweep user={user} />
+      <PweepList pweeps={pweeps} />
     </div>
   );
 };

@@ -1,19 +1,30 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Homepage } from "./pages/Homepage";
+import { Sidebar } from "./components/Sidebar";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <div>root</div>,
-  },
-  {
-    path: "/home",
-    element: <Homepage />,
-  },
-]);
+const AppShell = () => {
+  return (
+    <div style={{ display: "flex" }}>
+      <Sidebar />
+      <div>
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppShell />}>
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/profile" element={<div>Profile</div>} />
+          <Route path="/notifications" element={<div>Notifications</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
