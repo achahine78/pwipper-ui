@@ -15,8 +15,8 @@ type SidebarItem = {
 const SidebarItem = ({ icon, label, redirectLink }: SidebarItem) => {
   return (
     <NavLink to={redirectLink} className="sidebar__item">
-        <div className="sidebar__item-icon">{icon}</div>
-        <div className="sidebar__item-label">{label}</div>
+      <div className="sidebar__item-icon">{icon}</div>
+      <div className="sidebar__item-label">{label}</div>
     </NavLink>
   );
 };
