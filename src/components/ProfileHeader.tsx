@@ -9,7 +9,7 @@ export const ProfileHeader = ({ user }: Props) => {
   return (
     <div className="profile-header">
       <img src={user.image} className="profile-header__image" />
-      <div className="profile-header__username">{user.name}</div>
+      <div className="profile-header__username">{user.username}</div>
       <div className="profile-header__handle">@{user.handle}</div>
       <div className="profile-header__bio">{user.bio}</div>
       <div>

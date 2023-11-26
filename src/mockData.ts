@@ -3,7 +3,7 @@ import { User } from "./types/User";
 
 export const user: User = {
   id: "user",
-  name: "achahine78",
+  username: "achahine78",
   image: "https://picsum.photos/200",
   handle: "achahine78",
   bio: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
