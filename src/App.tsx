@@ -3,6 +3,7 @@ import { Homepage } from "./pages/Homepage";
 import { Sidebar } from "./components/Sidebar";
 import { Profile } from "./pages/Profile";
 import { Signup } from "./pages/Signup";
+import { Login } from "./pages/Login";
 
 const AppShell = () => {
   return (
@@ -20,6 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/" element={<AppShell />}>
           <Route path="/home" element={<Homepage />} />
           <Route path="/profile" element={<Profile />} />
