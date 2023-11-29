@@ -1,9 +1,14 @@
 import { SignupForm } from "../components/SignupForm";
+import { FlexContainer } from "../components/ui/FlexContainer";
 
 export const Signup = () => {
   return (
-    <div>
+    <FlexContainer
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+    >
       <SignupForm />
-    </div>
+    </FlexContainer>
   );
 };
