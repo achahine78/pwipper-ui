@@ -2,6 +2,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { Homepage } from "./pages/Homepage";
 import { Sidebar } from "./components/Sidebar";
 import { Profile } from "./pages/Profile";
+import { Signup } from "./pages/Signup";
 
 const AppShell = () => {
   return (
@@ -18,6 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<AppShell />}>
           <Route path="/home" element={<Homepage />} />
           <Route path="/profile" element={<Profile />} />
