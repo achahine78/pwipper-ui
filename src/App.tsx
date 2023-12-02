@@ -4,15 +4,18 @@ import { Sidebar } from "./components/Sidebar";
 import { Profile } from "./pages/Profile";
 import { Signup } from "./pages/Signup";
 import { Login } from "./pages/Login";
+import AuthGuard from "./guards/AuthGuard";
 
 const AppShell = () => {
   return (
-    <div style={{ display: "flex" }}>
-      <Sidebar />
-      <div>
-        <Outlet />
+    <AuthGuard>
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        <div>
+          <Outlet />
+        </div>
       </div>
-    </div>
+    </AuthGuard>
   );
 };
 
