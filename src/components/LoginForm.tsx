@@ -40,6 +40,7 @@ export const LoginForm = () => {
         onChange={(e) => {
           setHandle(e.target.value);
         }}
+        value={handle}
       />
       <FormInput
         label="Password"
@@ -47,6 +48,7 @@ export const LoginForm = () => {
         onChange={(e) => {
           setPassword(e.target.value);
         }}
+        value={password}
       />
       <FlexContainer justifyContent="flex-end">
         <button type="submit" className="login-form__button">

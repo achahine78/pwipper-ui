@@ -46,12 +46,14 @@ export const SignupForm = () => {
         onChange={(e) => {
           setUsername(e.target.value);
         }}
+        value={username}
       />
       <FormInput
         label="Handle"
         onChange={(e) => {
           setHandle(e.target.value);
         }}
+        value={handle}
       />
       <FormInput
         label="Password"
@@ -59,12 +61,14 @@ export const SignupForm = () => {
         onChange={(e) => {
           setPassword(e.target.value);
         }}
+        value={password}
       />
       <FormInput
         label="Bio"
         onChange={(e) => {
           setBio(e.target.value);
         }}
+        value={bio}
       />
       <FlexContainer justifyContent="flex-end">
         <button type="submit" className="signup-form__button">
