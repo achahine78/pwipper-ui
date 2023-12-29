@@ -9,7 +9,7 @@ export const PweepList = ({ pweeps }: Props) => {
   return (
     <div>
       {pweeps.map((pweep) => (
-        <PweepComponent pweep={pweep} />
+        <PweepComponent pweep={pweep} key={pweep.id} />
       ))}
     </div>
   );
