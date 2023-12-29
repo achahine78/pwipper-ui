@@ -4,6 +4,7 @@ import { FormInput } from "./ui/FormInput";
 import { addBearerToken, privateAxios } from "../api";
 import { useNavigate } from "react-router-dom";
 import { FlexContainer } from "./ui/FlexContainer";
+import { useUser } from "../hooks/useUser";
 
 export const SignupForm = () => {
   const navigate = useNavigate();
@@ -11,6 +12,8 @@ export const SignupForm = () => {
   const [handle, setHandle] = useState("");
   const [password, setPassword] = useState("");
   const [bio, setBio] = useState("");
+
+  const { storeUserInLocalStorage } = useUser();
 
   const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,6 +27,15 @@ export const SignupForm = () => {
       .then(({ data }) => {
         if (data?.token) {
           localStorage.setItem("token", data?.token);
+
+          storeUserInLocalStorage({
+            id: data.id,
+            username: data.username,
+            handle: data.handle,
+            image: data.image,
+            bio: data.bio,
+          });
+
           addBearerToken(data?.token);
           navigate("/home");
         }

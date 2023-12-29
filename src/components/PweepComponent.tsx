@@ -1,3 +1,4 @@
+import { useUser } from "../hooks/useUser";
 import { Pweep } from "../types/Pweep";
 import "./PweepComponent.scss";
 import { LikeOutlined, RetweetOutlined } from "@ant-design/icons";
@@ -7,7 +8,7 @@ type Props = {
 };
 
 export const PweepComponent = ({ pweep }: Props) => {
-  const { user } = pweep;
+  const { user } = useUser();
   return (
     <div className="pweep">
       <div className="pweep__profile-image-container">

@@ -12,7 +12,7 @@ const privateAxios = axios.create({
 });
 
 function addBearerToken(token: string) {
-  privateAxios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  privateAxios.defaults.headers["Authorization"] = `Bearer ${token}`;
 }
 
 export { privateAxios, addBearerToken };
