@@ -5,6 +5,7 @@ import { Profile } from "./pages/Profile";
 import { Signup } from "./pages/Signup";
 import { Login } from "./pages/Login";
 import AuthGuard from "./guards/AuthGuard";
+import { UserProfile } from "./pages/UserProfile";
 
 const AppShell = () => {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<AppShell />}>
           <Route path="/home" element={<Homepage />} />
+          <Route path="/profile/:handle" element={<UserProfile />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/notifications" element={<div>Notifications</div>} />
         </Route>
