@@ -5,6 +5,7 @@ import { addBearerToken, privateAxios } from "../api";
 import { useNavigate } from "react-router-dom";
 import { FlexContainer } from "./ui/FlexContainer";
 import { useUser } from "../hooks/useUser";
+import { Button } from "./ui/Button";
 
 export const SignupForm = () => {
   const navigate = useNavigate();
@@ -83,9 +84,7 @@ export const SignupForm = () => {
         value={bio}
       />
       <FlexContainer justifyContent="flex-end">
-        <button type="submit" className="signup-form__button">
-          Signup
-        </button>
+        <Button label="Signup" type="submit"/>
       </FlexContainer>
     </form>
   );

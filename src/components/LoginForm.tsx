@@ -5,6 +5,7 @@ import { FormInput } from "./ui/FormInput";
 import { addBearerToken, privateAxios } from "../api";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../hooks/useUser";
+import { Button } from "./ui/Button";
 
 export const LoginForm = () => {
   const navigate = useNavigate();
@@ -64,9 +65,7 @@ export const LoginForm = () => {
         value={password}
       />
       <FlexContainer justifyContent="flex-end">
-        <button type="submit" className="login-form__button">
-          Login
-        </button>
+        <Button label="Login" type="submit"/>
       </FlexContainer>
     </form>
   );

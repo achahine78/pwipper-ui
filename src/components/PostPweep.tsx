@@ -2,6 +2,7 @@ import { useState } from "react";
 import { User } from "../types/User";
 import "./PostPweep.scss";
 import { privateAxios } from "../api";
+import { Button } from "./ui/Button";
 
 type Props = {
   user: User;
@@ -29,9 +30,7 @@ export const PostPweep = ({ user }: Props) => {
         />
       </div>
       <div className="post-pweep__button-container">
-        <button className="post-pweep__button" onClick={postPweep}>
-          Post
-        </button>
+        <Button label="Post" onClick={postPweep} />
       </div>
     </div>
   );
